@@ -1,23 +1,36 @@
 import React from 'react'
-import ProductTable from './components/ProductTable'
+import Profile from './profile/Profile'
 
-const products = [
-  {name :50, price :'500', category :'electronics'},
-  {name :'smartphone', price :'450', category :'electronics'},
-  {name :'t-shirt', price :'25', category :'clothes'},
-  {name :'monitor', price :'200', category :'electronics'},
-  {name :'hat', price :'10', category :'clothes'},
-  {name :'shoes', price :'55', category :'clothes'}
-]
-class App extends React.Component {
-  render() {
-    return (
-      <React.Fragment>
-        {<tr>
-          <ProductTable products={products}/>
-        </tr>}
-      </React.Fragment>
-    )
+const App = () => {
+  const imgpath = ''
+  const handleName = (name) => {
+    alert(name)
   }
+  return (
+    <div style={{display :'flex' ,justifyContent :'space-around'}}>
+      <Profile
+        name='walid klai'
+        bio='ahfoaaoifoiaoaohdoianoinaodnazndo
+              nazodoazbroubarbararroaoroiaznroa
+              nzronazorinaozrnaoiznroainroanzro
+              nazornaoinranroanravonoernvoineri
+              vnoernvoerovnonpvnznpevnpeznvpnev
+              pnezipvnpenvpenvpnzevpnezpvnpnevev
+              vnzevnezovnoeznvoeznoznonvozneonzoen'
+        prof='dev' handleName={handleName} >
+        <img src='https://source.unsplash.com/random' width='200' />
+        <img src='https://source.unsplash.com/random' width='180' />
+        <img src='https://source.unsplash.com/random' width='160' />
+        <img src='https://source.unsplash.com/random' width='140' />
+        <img src='https://source.unsplash.com/random' width='120' />
+        <img src='https://source.unsplash.com/random' width='100' />
+        <img src='https://source.unsplash.com/random' width='80' />
+        <img src='https://source.unsplash.com/random' width='60' />
+        <img src='https://source.unsplash.com/random' width='40' />
+        <img src='https://source.unsplash.com/random' width='20' />
+        <img src='https://source.unsplash.com/random' width='10' />
+      </Profile>
+    </div>
+  )
 }
 export default App
