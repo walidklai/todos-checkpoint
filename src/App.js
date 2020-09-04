@@ -1,36 +1,18 @@
-import React from 'react'
-import Profile from './profile/Profile'
+import React ,{useState}from 'react'
+import Todos from './components/Todos'
+const TodoData=[
+  {id :1 ,todo :'learn HTML' ,chck :false ,toggleEdit :false},
+  {id :2 ,todo :'learn CSS' ,chck :false ,toggleEdit :false},
+  {id :3 ,todo :'learn JAVASCRIPT' ,chck :false ,toggleEdit :false},
+  {id :4 ,todo :'learn REACT' ,chck :false ,toggleEdit :false}
+] //toggleEdit is the most used bool value in this App ,it's used to toggle input types ,toggle innerHTML and so on .....and the most important thing in having this var is that we can know in wich phase we are ,for example if we are in the checkbox or the input ,if we have to use the onchange of this or that ,and so on
+const App=()=> {
 
-const App = () => {
-  const imgpath = ''
-  const handleName = (name) => {
-    alert(name)
-  }
   return (
-    <div style={{display :'flex' ,justifyContent :'space-around'}}>
-      <Profile
-        name='walid klai'
-        bio='ahfoaaoifoiaoaohdoianoinaodnazndo
-              nazodoazbroubarbararroaoroiaznroa
-              nzronazorinaozrnaoiznroainroanzro
-              nazornaoinranroanravonoernvoineri
-              vnoernvoerovnonpvnznpevnpeznvpnev
-              pnezipvnpenvpenvpnzevpnezpvnpnevev
-              vnzevnezovnoeznvoeznoznonvozneonzoen'
-        prof='dev' handleName={handleName} >
-        <img src='https://source.unsplash.com/random' width='200' />
-        <img src='https://source.unsplash.com/random' width='180' />
-        <img src='https://source.unsplash.com/random' width='160' />
-        <img src='https://source.unsplash.com/random' width='140' />
-        <img src='https://source.unsplash.com/random' width='120' />
-        <img src='https://source.unsplash.com/random' width='100' />
-        <img src='https://source.unsplash.com/random' width='80' />
-        <img src='https://source.unsplash.com/random' width='60' />
-        <img src='https://source.unsplash.com/random' width='40' />
-        <img src='https://source.unsplash.com/random' width='20' />
-        <img src='https://source.unsplash.com/random' width='10' />
-      </Profile>
+    <div style={{textAlign :'center'}}>
+      <Todos items={TodoData}/>
     </div>
   )
 }
+
 export default App
