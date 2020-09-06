@@ -1,19 +1,28 @@
 *{
-    background-color: rgb(175, 143, 143);
+    background-color: rgb(176, 195, 214);
 }
-img{
-    border-radius: 5px;
+.TodoItem{
+    margin: 2px;
+    border-radius: 25px;
 }
-body{
-    font-family: "Lucida Console", Courier, monospace;
+
+.TodoItem label {
+    display: inline-block;
+    width: 145px;
+    text-align: left;
+    border-radius: 1px;
+    margin-right: 20px;
 }
-input[type=text],input[type=file]{
-    margin-top: 5px;
+.TodoItem input[type=text] {
+    background-color: black;
+    color: white;
 }
-h1{
-    color: wheat;
-    text-align: center;
+
+button{
+    text-decoration: none;
+    border-radius: 25px;
+    margin: 10px;
 }
-input :focus{
-    color: wheat;
+input[type=text]{
+    border-radius :10%;
 }
